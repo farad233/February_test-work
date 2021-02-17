@@ -1,0 +1,29 @@
+// ::-webkit-input-placeholder {color: #DFDFDF;}
+// ::-moz-placeholder          {color: #DFDFDF;}/* Firefox 19+ */
+// :-moz-placeholder           {color: #DFDFDF;}/* Firefox 18- */
+// :-ms-input-placeholder      {color: #DFDFDF;}
+* {
+  box-sizing: border-box;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+a,
+ul {
+  margin: 0;
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+}
+body {
+  background: #f2f2f2;
+  font-family: "Roboto", sans-serif;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+@import "include";

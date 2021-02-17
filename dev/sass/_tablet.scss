@@ -1,0 +1,20 @@
+@media (max-width: 361px) {
+  .login_menu h2 {
+    padding: 0px 10px;
+  }
+  ul.nav.nav-tabs {
+    padding: 0 10px;
+  }
+  .socials {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    padding: 10px;
+  }
+  .form {
+    padding: 24px 10px 0;
+  }
+  .sign-in_btn {
+    padding: 0 10px;
+  }
+}

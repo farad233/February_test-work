@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>test_project</title>
+  </head>
+
+  <body>
+    <div class="container login_menu">
+      <h2>Profile</h2>
+      <div class="mt-3">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              data-toggle="tab"
+              id="btn_registration"
+              href="#registration"
+              >Registration</a
+            >
+          </li>
+          <li class="nav-item" id="containerr">
+            <a
+              class="nav-link"
+              data-toggle="tab"
+              id="btn_sign-in"
+              href="#sign_in"
+              >Sign in</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div id="registration" class="container tab-pane active">
+            <div class="socials">
+              <div>
+                <p>You can sign in with social</p>
+              </div>
+              <div class="socials__links">
+                <a href="/" class="vk"></a>
+                <a href="/" class="facebook"></a><a href="/" class="google"></a>
+              </div>
+            </div>
+            <form class="form">
+              <input type="text" placeholder="Your name" class="form_inputs" />
+              <input
+                type="email"
+                pattern=".+@.+.com"
+                placeholder="E-mail"
+                class="form_inputs"
+              />
+              <input
+                class="form_inputs"
+                type="tel"
+                id="phone"
+                name="phone"
+                pattern="[+]380[0-9]{9,10}"
+                required
+                placeholder="Phone"
+              />
+              <div class="formname">
+                <input
+                  id="checkbox"
+                  type="checkbox"
+                  name="checkbox"
+                  onchange="document.getElementById('submit').disabled = !this.checked;"
+                />
+                <label for="checkbox"
+                  >I accept the terms of the offer of
+                  <a>the privacy policy</a></label
+                >
+                <input
+                  class="btn_input"
+                  type="submit"
+                  disabled="disabled"
+                  name="submit"
+                  id="submit"
+                  value="Registration"
+                />
+              </div>
+            </form>
+            <div id="container">
+              <a class="sign-in_btn" id="btn_sign-in__copy" href="#sign_in"
+                >Sign in</a
+              >
+            </div>
+          </div>
+          <div id="sign_in" class="container tab-pane fade">
+            <div class="tab-content">
+              <div class="socials">
+                <div>
+                  <p>You can sign in with social</p>
+                </div>
+                <div class="socials__links">
+                  <a href="/" class="vk"></a>
+                  <a href="/" class="facebook"></a
+                  ><a href="/" class="google"></a>
+                </div>
+              </div>
+              <form class="form">
+                <input
+                  type="email"
+                  pattern=".+@.+.com"
+                  placeholder="E-mail"
+                  class="form_inputs"
+                />
+                <input
+                  class="form_inputs"
+                  type="password"
+                  id="password"
+                  name="password"
+                  pattern=".{6,15}"
+                  required
+                  placeholder="Password"
+                />
+                <div class="formname">
+                  <input
+                    id="checkbox2"
+                    type="checkbox"
+                    name="checkbox"
+                    onchange="document.getElementById('submit2').disabled = !this.checked;"
+                  />
+                  <label for="checkbox2"
+                    >I accept the terms of the offer of
+                    <a>the privacy policy</a></label
+                  >
+                  <input
+                    class="btn_input"
+                    type="submit"
+                    disabled="disabled"
+                    name="submit"
+                    id="submit2"
+                    value="Sign in"
+                  />
+                </div>
+              </form>
+              <a
+                class="sign-in_btn"
+                id="btn_registration__copy"
+                href="#registration"
+                >Registration</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      var phoneValidation = document.getElementById("phone");
+      phoneValidation.onclick = function () {
+        phoneValidation.value = "+380";
+      };
+      $("#btn_sign-in__copy").on("click", function (e) {
+        $("#btn_sign-in").trigger("click");
+      });
+      $("#btn_registration__copy").on("click", function (e) {
+        $("#btn_registration").trigger("click");
+      });
+    </script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
